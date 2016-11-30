@@ -241,7 +241,7 @@ template {
   display: none;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 1024px) {
   .m-hidden {
     display: none;
   }
@@ -306,7 +306,7 @@ body {
   }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 1024px) {
   .container {
     width: 85.33333%;
   }
@@ -339,7 +339,7 @@ body {
   }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 1024px) {
   .main .login {
     width: 300px;
     height: auto;
@@ -352,7 +352,7 @@ body {
   color: #fff;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 1024px) {
   .main .login h1 {
     font-size: 28px;
   }
@@ -367,7 +367,7 @@ body {
   border-radius: 5px;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 1024px) {
   .main .login form input {
     width: 300px;
     height: 60px;
@@ -383,7 +383,7 @@ body {
   font-size: 15px;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 1024px) {
   .main .login form button {
     font-size: 16px;
   }
@@ -401,7 +401,7 @@ body {
   transition: 0.4s all;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 1024px) {
   .main .login > p a, .main .login > p span {
     font-size: 16px;
   }
@@ -423,7 +423,7 @@ body {
   transition: 0.4s all;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 1024px) {
   .main .login .facebook-login p {
     font-size: 16px;
   }
