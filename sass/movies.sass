@@ -267,11 +267,6 @@ main
 
         &:nth-child(2), &:nth-child(3), &:nth-child(4)
           border-left: none
-        // &:hover
-          // border-bottom: 1px solid $fingo-mian-color
-        //tab active 부분
-        // &:nth-child(3)
-          // border-bottom: 1px solid $fingo-mian-color
 
         &::after
           content: ""
@@ -338,7 +333,7 @@ main
       .hover
         +position(absolute, top 0 z-index 10)
         +size(100% 100%)
-        opacity: 0
+        opacity: 1
         cursor: pointer
         background: rgba(#000000, 0.3)
         text-align: center
@@ -349,67 +344,7 @@ main
           +mobile
             font-size: 20px
             +margin(top 90px)
-        .stars
-          text-align: center
-          +size(180px 36px)
-          +margin(top 40px bottom 55px left auto right auto)
-          +mobile
-            +size(230px 38px)
-            +margin(top 60px bottom 80px)
-          span
-            +background(image url('../img/icon-star.svg') repeat no-repeat size cover)
-            +size(13px 26px)
-            display: block
-            overflow: hidden
-            float: left
-            position: relative
 
-            +mobile
-              +background(image url('../img/icon-star.svg') repeat no-repeat)
-              +size(19px 38px)
-            a
-              +size(13px 26px)
-              display: block
-              +mobile
-                +size(19px 38px)
-              img
-                +size(26px 26px)
-                +mobile
-                  +size(38px 38px)
-                opacity: 0
-            &:hover a img
-              opacity: 1
-            &:nth-of-type(2n)
-              +background(image url('../img/icon-star.svg') position -13px 0px  repeat no-repeat)
-              +margin(right 10px)
-              +mobile
-                +background(position -19px 0px)
-              img
-                +position(relative,top 0px right 13px)
-                +mobile
-                  +position(relative,top 0px right 19px)
-
-
-            &:last-child
-              +margin(right 0px)
-            &:nth-of-type(2n)::after
-              // content: url('../img/icon-star-on.svg')
-              // background-color: #e7ae5a
-              display: block
-              +position(absolute, top 1px right 0)
-              opacity: 0
-              +mobile
-                // +backgroun(url('../img/icon-star-on.svg') position center center repeat no-repeat size cover)
-                +size(38px 38px)
-
-                // transform: scale(1)
-            &:nth-of-type(1n)::after
-              // content: url('../img/icon-star-on.svg')
-              display: block
-              opacity: 0
-              +position(absolute, top 1px )
-          span:hover::after
-            opacity: 1
 
         button
           +margin(bottom 10px left auto right auto)

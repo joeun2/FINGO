@@ -1,0 +1,135 @@
+@import ./config/fingo-colors
+@import ../Modules/sass/style
+
+label
+  font-size: 16px
+
+.stars
+  text-align: center
+  +size(150px 36px)
+  +margin(top 40px bottom 55px left auto right auto)
+  +mobile
+    +size(230px 38px)
+    +margin(top 60px bottom 80px)
+
+.close-btn-active
+  color: #999
+
+#star_rating svg
+	width: 13px
+	height: 36px
+	fill: currentColor
+
+#star_rating label,
+	display: block
+	float: left
+	font-size: 16px
+	color: #e7ae5a
+	cursor: pointer
+
+// #star_rating label::before
+// 	content: ""
+//   display: block
+//   clear: both
+
+#star_rating
+  position: relative
+
+  .star2 svg,
+  .star4 svg,
+  .star6 svg,
+  .star8 svg
+    margin-right: 5px
+
+  output
+    color: #fff
+    font-size: 16px
+    +position(absolute, top -30px left 0px)
+    border-radius: 5px
+    opacity: 1
+  >button
+    position: absolute
+    top: -999px
+    left: 0px
+    height: 40px
+    border-radius: 2px
+    background: rgba(#161616, 0.9)
+    color: #fff
+    border: 1px solid #161616
+
+  // output::before
+  //   content: "점수 : "
+
+
+
+  input
+    position: absolute
+    top: -9999px
+    left: 0
+
+  label button
+    position: absolute
+    top: 40px
+    left: 50%
+    transform: translateX(-50%)
+    width: 50px
+    height: 30px
+    border-radius: 2px
+    background: rgba(#161616, 0.9)
+    color: #fff
+    border: 1px solid #161616
+  label button:hover
+    border: 1px solid #ddd
+
+  label:last-child
+    margin-right: 0px
+
+  label
+    height: 36px
+    span
+      position: absolute
+      top: 30px
+      left: 1
+      opacity: 0
+    &:hover span
+      opacity: 1
+      font-size: 14px
+      +background(color rgba(#161616, 0.9))
+      color: #fff
+      border-radius: 5px
+      border: 1px solid #161616
+      // display: block
+      padding: 5px
+
+//input:checked 시에 label 선택
+#star_rating input:checked ~ label
+	color: #999
+
+#star_rating input:checked + label
+	color: #e7ae5a
+
+#star_rating button:checked label
+	color: #999
+
+#star_rating input:focus + label
+
+#star_rating:hover input + label
+	color: #e7ae5a
+
+#star_rating input:hover ~ label,
+#star_rating input[id="cancel"] + label
+	color: #999
+
+#star_rating input:hover + label,
+	color: #e7ae5a
+
+#star_rating input[id="cancel"]:checked + label
+	color: #999
+
+#star_rating [type="submit"]
+	float: none
+
+.submit
+  position: absolute
+  top: -999px
+  left: 0

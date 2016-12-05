@@ -1252,7 +1252,7 @@ main .sub-menu ul li a {
   z-index: 10;
   width: 100%;
   height: 100%;
-  opacity: 0;
+  opacity: 1;
   cursor: pointer;
   background: rgba(0, 0, 0, 0.3);
   text-align: center;
@@ -1269,133 +1269,6 @@ main .sub-menu ul li a {
     font-size: 20px;
     margin-top: 90px;
   }
-}
-
-.movies .movie-list figure .hover .stars {
-  text-align: center;
-  width: 180px;
-  height: 36px;
-  margin-top: 40px;
-  margin-left: auto;
-  margin-bottom: 55px;
-  margin-right: auto;
-}
-
-@media (max-width: 750px) {
-  .movies .movie-list figure .hover .stars {
-    width: 230px;
-    height: 38px;
-    margin-top: 60px;
-    margin-bottom: 80px;
-  }
-}
-
-.movies .movie-list figure .hover .stars span {
-  background-image: url("../img/icon-star.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 13px;
-  height: 26px;
-  display: block;
-  overflow: hidden;
-  float: left;
-  position: relative;
-}
-
-@media (max-width: 750px) {
-  .movies .movie-list figure .hover .stars span {
-    background-image: url("../img/icon-star.svg");
-    background-repeat: no-repeat;
-    width: 19px;
-    height: 38px;
-  }
-}
-
-.movies .movie-list figure .hover .stars span a {
-  width: 13px;
-  height: 26px;
-  display: block;
-}
-
-@media (max-width: 750px) {
-  .movies .movie-list figure .hover .stars span a {
-    width: 19px;
-    height: 38px;
-  }
-}
-
-.movies .movie-list figure .hover .stars span a img {
-  width: 26px;
-  height: 26px;
-  opacity: 0;
-}
-
-@media (max-width: 750px) {
-  .movies .movie-list figure .hover .stars span a img {
-    width: 38px;
-    height: 38px;
-  }
-}
-
-.movies .movie-list figure .hover .stars span:hover a img {
-  opacity: 1;
-}
-
-.movies .movie-list figure .hover .stars span:nth-of-type(2n) {
-  background-image: url("../img/icon-star.svg");
-  background-repeat: no-repeat;
-  background-position: -13px 0px;
-  margin-right: 10px;
-}
-
-@media (max-width: 750px) {
-  .movies .movie-list figure .hover .stars span:nth-of-type(2n) {
-    background-position: -19px 0px;
-  }
-}
-
-.movies .movie-list figure .hover .stars span:nth-of-type(2n) img {
-  position: relative;
-  top: 0px;
-  right: 13px;
-}
-
-@media (max-width: 750px) {
-  .movies .movie-list figure .hover .stars span:nth-of-type(2n) img {
-    position: relative;
-    top: 0px;
-    right: 19px;
-  }
-}
-
-.movies .movie-list figure .hover .stars span:last-child {
-  margin-right: 0px;
-}
-
-.movies .movie-list figure .hover .stars span:nth-of-type(2n)::after {
-  display: block;
-  position: absolute;
-  top: 1px;
-  right: 0;
-  opacity: 0;
-}
-
-@media (max-width: 750px) {
-  .movies .movie-list figure .hover .stars span:nth-of-type(2n)::after {
-    width: 38px;
-    height: 38px;
-  }
-}
-
-.movies .movie-list figure .hover .stars span:nth-of-type(1n)::after {
-  display: block;
-  opacity: 0;
-  position: absolute;
-  top: 1px;
-}
-
-.movies .movie-list figure .hover .stars span:hover::after {
-  opacity: 1;
 }
 
 .movies .movie-list figure .hover button {

@@ -5,7 +5,7 @@
     this.onscroll =  function(){
       // console.log('on');
       var nav  = document.querySelector('.nav');
-      console.log(nav);
+      
 
       var scrollY = this.scrollY || this.scrollTop;
       console.log(scrollY);
