@@ -36,12 +36,14 @@ body
 // * --------------------------------
 // * Nav
 // * --------------------------------
-.nav-active
-  +background(color $fingo-bg-dark)
+
 .nav
   position: fixed
+  top: 0px
+  left: 0px
   +size(100% 100px)
   z-index: 100
+  +background(color $fingo-bg-dark)
 
   .logo
     position: relative
@@ -206,95 +208,24 @@ body
     img
       +size(42px 42px)
 
-// * --------------------------------
-// * Header
-// * --------------------------------
-header
-  +size(100% 450px)
-  color: #fff
-  +background(image url('../img/sub-bg-img.png') position center center repeat no-repeat size cover)
-  .profile
-    height: 450px
-    text-align: center
-    .account
-      position: relative
-      // display: inline-block
-      +padding(top 200px)
-      text-align: center
-      h1
-        @extend %a11y-hidden
-      .thumbnail
-        img
-          +size(75px 75px)
-      p
-        font-size: 18px
-        +margin(top 10px)
-    section:nth-child(2), section:nth-child(3)
-      display: inline-block
-    .total-movies
-      +position(relative, top -95px left -50px)
-      // +margin(top -80px  left 200px)
-      h1
-        +position(relative, top 40px left 0)
-        font-size: 12px
-      strong
-        font-size: 16px
-        font-weight: normal
 
-    .received-likes
-      +position(relative, top -95px right -50px)
-      // +margin(top -48px  right 200px)
-      h1
-        +position(relative, top 40px left 0)
-        font-size: 12px
-      img
-        +position(relative, top 5px left 0)
-      strong
-        font-size: 16px
-        font-weight: normal
 // * --------------------------------
 // * Main
 // * --------------------------------
 main
-  .sub-menu
-    +size(100% 60px)
-    border-bottom: 1px solid $fingo-border
-    ul
-      li
-        float: left
-        border-left: 1px solid $fingo-border
-        border-right: 1px solid $fingo-border
-
-        &:nth-child(2), &:nth-child(3), &:nth-child(4)
-          border-left: none
-
-        &::after
-          content: ""
-          display: block
-          +size(100% 1px)
-          +background(color $fingo-mian-color)
-          clear: both
-          transform: scale(0)
-          transition: all 0.3s
-        &:nth-child(3)::after
-          transform: scale(1)
-        &:hover::after
-          transform: scale(1)
-
-        a
-          +size(auto 60px)
-          +padding(left 20px right 20px)
-          display: block
-          color: $fingo-font-dd
-          font-size: 14px
-          line-height: 60px
-
+  +padding(top 100px)
 .movies
   +margin(top 60px)
-
-
   h1
     @extend %a11y-hidden
+  p
+    font-size: 14px
+    color: $fingo-white
+    +margin(bottom 40px)
+    span
+      color: $fingo-mian-color
+      font-size: 20px
+      font-weight: bold
   .movie-list
     +tablet
       +size(736px auto)
@@ -314,10 +245,10 @@ main
       &:nth-child(5n)
         +margin(right 0px)
       +tablet
-        &:nth-child(5n)
-          +margin(right 20px)
         &:nth-child(3n)
           +margin(right 0px)
+        &:nth-child(5n)
+          +margin(right 20px)
       +mobile
         background-color: pink
         // +margin(right 20px auto)
@@ -333,7 +264,7 @@ main
       .hover
         +position(absolute, top 0 z-index 10)
         +size(100% 100%)
-        opacity: 1
+        opacity: 0
         cursor: pointer
         background: rgba(#000000, 0.3)
         text-align: center
@@ -346,8 +277,7 @@ main
             +margin(top 90px)
 
 
-        .like-btn,
-        .heart-btn
+        button
           +margin(bottom 10px left auto right auto)
           +size(110px 35px)
           font-size: 14px

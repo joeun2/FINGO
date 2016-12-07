@@ -255,7 +255,7 @@ template {
   }
 }
 
-.nav .logo > h1 span, .nav form label, .nav .profile-menu h1, header .profile .account h1, .movies h1 {
+.nav .logo > h1 span, .nav form label, .nav .profile-menu h1, .movies h1 {
   overflow: hidden;
   position: absolute;
   clip: rect(0 0 0 0);
@@ -308,15 +308,14 @@ body {
   }
 }
 
-.nav-active {
-  background-color: #161616;
-}
-
 .nav {
   position: fixed;
+  top: 0px;
+  left: 0px;
   width: 100%;
   height: 100px;
   z-index: 100;
+  background-color: #161616;
 }
 
 .nav .logo {
@@ -615,131 +614,24 @@ body {
   height: 42px;
 }
 
-header {
-  width: 100%;
-  height: 450px;
-  color: #fff;
-  background-image: url("../img/sub-bg-img.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-}
-
-header .profile {
-  height: 450px;
-  text-align: center;
-}
-
-header .profile .account {
-  position: relative;
-  padding-top: 200px;
-  text-align: center;
-}
-
-header .profile .account .thumbnail img {
-  width: 75px;
-  height: 75px;
-}
-
-header .profile .account p {
-  font-size: 18px;
-  margin-top: 10px;
-}
-
-header .profile section:nth-child(2), header .profile section:nth-child(3) {
-  display: inline-block;
-}
-
-header .profile .total-movies {
-  position: relative;
-  top: -95px;
-  left: -50px;
-}
-
-header .profile .total-movies h1 {
-  position: relative;
-  top: 40px;
-  left: 0;
-  font-size: 12px;
-}
-
-header .profile .total-movies strong {
-  font-size: 16px;
-  font-weight: normal;
-}
-
-header .profile .received-likes {
-  position: relative;
-  top: -95px;
-  right: -50px;
-}
-
-header .profile .received-likes h1 {
-  position: relative;
-  top: 40px;
-  left: 0;
-  font-size: 12px;
-}
-
-header .profile .received-likes img {
-  position: relative;
-  top: 5px;
-  left: 0;
-}
-
-header .profile .received-likes strong {
-  font-size: 16px;
-  font-weight: normal;
-}
-
-main .sub-menu {
-  width: 100%;
-  height: 60px;
-  border-bottom: 1px solid #222;
-}
-
-main .sub-menu ul li {
-  float: left;
-  border-left: 1px solid #222;
-  border-right: 1px solid #222;
-}
-
-main .sub-menu ul li:nth-child(2), main .sub-menu ul li:nth-child(3), main .sub-menu ul li:nth-child(4) {
-  border-left: none;
-}
-
-main .sub-menu ul li::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 1px;
-  background-color: #c6a471;
-  clear: both;
-  transform: scale(0);
-  transition: all 0.3s;
-}
-
-main .sub-menu ul li:nth-child(3)::after {
-  transform: scale(1);
-}
-
-main .sub-menu ul li:hover::after {
-  transform: scale(1);
-}
-
-main .sub-menu ul li a {
-  width: auto;
-  height: 60px;
-  padding-left: 20px;
-  padding-right: 20px;
-  display: block;
-  color: #ddd;
-  font-size: 14px;
-  line-height: 60px;
+main {
+  padding-top: 100px;
 }
 
 .movies {
   margin-top: 60px;
+}
+
+.movies p {
+  font-size: 14px;
+  color: #fff;
+  margin-bottom: 40px;
+}
+
+.movies p span {
+  color: #c6a471;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 @media (min-width: 751px) and (max-width: 1024px) {
@@ -777,11 +669,11 @@ main .sub-menu ul li a {
 }
 
 @media (min-width: 751px) and (max-width: 1024px) {
-  .movies .movie-list figure:nth-child(5n) {
-    margin-right: 20px;
-  }
   .movies .movie-list figure:nth-child(3n) {
     margin-right: 0px;
+  }
+  .movies .movie-list figure:nth-child(5n) {
+    margin-right: 20px;
   }
 }
 
@@ -812,7 +704,7 @@ main .sub-menu ul li a {
   z-index: 10;
   width: 100%;
   height: 100%;
-  opacity: 1;
+  opacity: 0;
   cursor: pointer;
   background: rgba(0, 0, 0, 0.3);
   text-align: center;
@@ -831,8 +723,7 @@ main .sub-menu ul li a {
   }
 }
 
-.movies .movie-list figure .hover .like-btn,
-.movies .movie-list figure .hover .heart-btn {
+.movies .movie-list figure .hover button {
   margin-left: auto;
   margin-bottom: 10px;
   margin-right: auto;
@@ -846,39 +737,32 @@ main .sub-menu ul li a {
 }
 
 @media (max-width: 750px) {
-  .movies .movie-list figure .hover .like-btn,
-  .movies .movie-list figure .hover .heart-btn {
+  .movies .movie-list figure .hover button {
     width: 180px;
     height: 50px;
     font-size: 16px;
   }
 }
 
-.movies .movie-list figure .hover .like-btn img:first-child,
-.movies .movie-list figure .hover .heart-btn img:first-child {
+.movies .movie-list figure .hover button img:first-child {
   width: 16px;
   height: 13px;
   margin-right: 5px;
 }
 
 @media (max-width: 750px) {
-  .movies .movie-list figure .hover .like-btn img:first-child,
-  .movies .movie-list figure .hover .heart-btn img:first-child {
+  .movies .movie-list figure .hover button img:first-child {
     width: 21px;
     height: 19px;
   }
 }
 
-.movies .movie-list figure .hover .like-btn:nth-of-type(1):hover, .movies .movie-list figure .hover .like-btn:nth-of-type(1):active,
-.movies .movie-list figure .hover .heart-btn:nth-of-type(1):hover,
-.movies .movie-list figure .hover .heart-btn:nth-of-type(1):active {
+.movies .movie-list figure .hover button:nth-of-type(1):hover, .movies .movie-list figure .hover button:nth-of-type(1):active {
   background-color: #be3c39;
   border: 1px solid #be3c39;
 }
 
-.movies .movie-list figure .hover .like-btn:nth-of-type(2):hover, .movies .movie-list figure .hover .like-btn:nth-of-type(2):active,
-.movies .movie-list figure .hover .heart-btn:nth-of-type(2):hover,
-.movies .movie-list figure .hover .heart-btn:nth-of-type(2):active {
+.movies .movie-list figure .hover button:nth-of-type(2):hover, .movies .movie-list figure .hover button:nth-of-type(2):active {
   background-color: #27569c;
   border: 1px solid #27569c;
 }

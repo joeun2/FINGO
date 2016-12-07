@@ -3,10 +3,7 @@
   function scrollOn(){
     console.log(this);
     this.onscroll =  function(){
-      // console.log('on');
       var nav  = document.querySelector('.nav');
-      
-
       var scrollY = this.scrollY || this.scrollTop;
       console.log(scrollY);
         if (scrollY > 0) {

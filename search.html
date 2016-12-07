@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>내가 본 영화::Fingo</title>
+  <title>검색 결과::Fingo</title>
   <link href="http://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="./css/svg-style.css">
-  <link rel="stylesheet" href="./css/movies.css">
+  <link rel="stylesheet" href="./css/search.css">
   <link rel="stylesheet" href="./css/star.css">
   <script src="lib/jquery.min.js"></script>
   <script src="lib/jquery.easing.min.js"></script>
@@ -55,38 +55,11 @@
       </div>
     </div>
   </nav>
-  <header class="header">
-    <div class="profile container">
-      <section class="account">
-        <h1>개인 프로필</h1>
-        <div class="thumbnail">
-          <img src="./img/icon-profile.svg" alt="프로필 사진">
-        </div>
-        <p>이름</p>
-      </section>
-      <section class="total-movies">
-        <h1>영화 보관함</h1>
-        <strong>000</strong>
-      </section>
-      <section class="received-likes">
-        <h1>받은 좋아요</h1>
-        <img src="./img/icon-like.svg" alt="좋아요">
-        <strong>000</strong>
-      </section>
-    </div>
-  </header>
   <main>
-    <div class="sub-menu">
-      <ul class="container">
-        <li><a href="#">취향통개분석</a></li>
-        <li><a href="#">보고싶어요</a></li>
-        <li><a href="#">봤어요</a></li>
-        <li><a href="#">코맨트</a></li>
-      </ul>
-    </div>
-
   <section class="container movies">
+
     <h1>봤어요 목록</h1>
+    <p>입력하신 <span>팀버튼</span>의 검색 결과입니다.</p>
     <div class="movie-list">
       <figure class="top-1">
         <img src="img/photo-main-poster-2.png" alt="">
@@ -98,7 +71,7 @@
              <input value="null" id="cencel" checked type="radio" name="rating" >
               <label for="cencel">
                 <span>취소</span>
-                <button type="button" name="button" class="cancel-btn">
+                <button type="button" name="button" class="close-btn">
                   취소
                 </button>
               </label>
@@ -196,11 +169,10 @@
 
               <button type="submit" class="submit">평가하기</button>
               <output></output>
-
             </form>
           </div>
-          <button type="button" class="heart-btn"><img src="./img/icon-heart.svg" alt="보고싶어요">보고싶어요</button>
-          <button type="button" class="like-btn"><img src="./img/icon-comment.svg" alt="코멘트">코멘트 쓰기</button>
+          <button type="button"><img src="./img/icon-heart.svg" alt="보고싶어요">보고싶어요</button>
+          <button type="button"><img src="./img/icon-comment.svg" alt="코멘트">코멘트 쓰기</button>
         </div>
       </figure>
       <figure class="top-2">
@@ -208,10 +180,9 @@
         <div class="hover">
           <p>신비한 동물사전</p>
           <div class="stars">
-
           </div>
-          <button type="button" class="heart-btn"><img src="./img/icon-heart.svg" alt="보고싶어요">보고싶어요</button>
-          <button type="button" class="like-btn"><img src="./img/icon-comment.svg" alt="코멘트">코멘트 쓰기</button>
+          <button type="button"><img src="./img/icon-heart.svg" alt="보고싶어요">보고싶어요</button>
+          <button type="button"><img src="./img/icon-comment.svg" alt="코멘트">코멘트 쓰기</button>
         </div>
       </figure>
       <figure class="top-1 left-2">
@@ -221,8 +192,8 @@
           <div class="stars">
 
           </div>
-          <button type="button" ><img src="./img/icon-heart.svg" alt="보고싶어요">보고싶어요</button>
-          <button type="button" ><img src="./img/icon-comment.svg" alt="코멘트">코멘트 쓰기</button>
+          <button type="button"><img src="./img/icon-heart.svg" alt="보고싶어요">보고싶어요</button>
+          <button type="button"><img src="./img/icon-comment.svg" alt="코멘트">코멘트 쓰기</button>
         </div>
       </figure>
       <figure class="top-2 left-2">
@@ -418,6 +389,6 @@
 
 <script type="text/javascript" src="./js/star.js"></script>
 <script type="text/javascript" src="./js/toggle-menu.js"></script>
-<script type="text/javascript" src="./js/scroll-event.js"></script>
+<!-- <script type="text/javascript" src="./js/scroll-event.js"></script> -->
 </body>
 </html>

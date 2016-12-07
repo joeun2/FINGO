@@ -719,7 +719,7 @@ main .sub-menu ul li::after {
   transition: all 0.3s;
 }
 
-main .sub-menu ul li:nth-child(3)::after {
+main .sub-menu ul li:nth-child(4)::after {
   transform: scale(1);
 }
 
@@ -767,7 +767,6 @@ main .sub-menu ul li a {
 .movies .movie-list figure {
   float: left;
   margin-bottom: 20px;
-  margin-right: 20px;
   transition: 0.3s all;
   position: relative;
 }
@@ -777,17 +776,18 @@ main .sub-menu ul li a {
 }
 
 @media (min-width: 751px) and (max-width: 1024px) {
-  .movies .movie-list figure:nth-child(5n) {
-    margin-right: 20px;
-  }
   .movies .movie-list figure:nth-child(3n) {
     margin-right: 0px;
+  }
+  .movies .movie-list figure:nth-child(5n) {
+    margin-right: 20px;
   }
 }
 
 @media (max-width: 750px) {
   .movies .movie-list figure {
     background-color: pink;
+    margin-right: 20px;
     width: 350px;
     height: 500px;
   }
@@ -797,6 +797,11 @@ main .sub-menu ul li a {
   .movies .movie-list figure:nth-child(5n) {
     margin-right: 20px;
   }
+}
+
+.movies .movie-list figure img {
+  width: 200px;
+  height: 300px;
 }
 
 @media (max-width: 750px) {
@@ -812,7 +817,7 @@ main .sub-menu ul li a {
   z-index: 10;
   width: 100%;
   height: 100%;
-  opacity: 1;
+  opacity: 0;
   cursor: pointer;
   background: rgba(0, 0, 0, 0.3);
   text-align: center;
@@ -831,8 +836,7 @@ main .sub-menu ul li a {
   }
 }
 
-.movies .movie-list figure .hover .like-btn,
-.movies .movie-list figure .hover .heart-btn {
+.movies .movie-list figure .hover button {
   margin-left: auto;
   margin-bottom: 10px;
   margin-right: auto;
@@ -846,43 +850,117 @@ main .sub-menu ul li a {
 }
 
 @media (max-width: 750px) {
-  .movies .movie-list figure .hover .like-btn,
-  .movies .movie-list figure .hover .heart-btn {
+  .movies .movie-list figure .hover button {
     width: 180px;
     height: 50px;
     font-size: 16px;
   }
 }
 
-.movies .movie-list figure .hover .like-btn img:first-child,
-.movies .movie-list figure .hover .heart-btn img:first-child {
+.movies .movie-list figure .hover button img:first-child {
   width: 16px;
   height: 13px;
   margin-right: 5px;
 }
 
 @media (max-width: 750px) {
-  .movies .movie-list figure .hover .like-btn img:first-child,
-  .movies .movie-list figure .hover .heart-btn img:first-child {
+  .movies .movie-list figure .hover button img:first-child {
     width: 21px;
     height: 19px;
   }
 }
 
-.movies .movie-list figure .hover .like-btn:nth-of-type(1):hover, .movies .movie-list figure .hover .like-btn:nth-of-type(1):active,
-.movies .movie-list figure .hover .heart-btn:nth-of-type(1):hover,
-.movies .movie-list figure .hover .heart-btn:nth-of-type(1):active {
+.movies .movie-list figure .hover button:nth-of-type(1):hover, .movies .movie-list figure .hover button:nth-of-type(1):active {
   background-color: #be3c39;
   border: 1px solid #be3c39;
 }
 
-.movies .movie-list figure .hover .like-btn:nth-of-type(2):hover, .movies .movie-list figure .hover .like-btn:nth-of-type(2):active,
-.movies .movie-list figure .hover .heart-btn:nth-of-type(2):hover,
-.movies .movie-list figure .hover .heart-btn:nth-of-type(2):active {
+.movies .movie-list figure .hover button:nth-of-type(2):hover, .movies .movie-list figure .hover button:nth-of-type(2):active {
   background-color: #27569c;
   border: 1px solid #27569c;
 }
 
 .movies .movie-list figure:hover .hover {
   opacity: 1;
+}
+
+.comment-box {
+  margin-bottom: 20px;
+  margin-right: 20px;
+  position: relative;
+  float: left;
+  color: #fff;
+  width: 200px;
+  height: 300px;
+  background-color: #222;
+  padding-top: 30px;
+  padding-left: 25px;
+  padding-right: 25px;
+  box-sizing: border-box;
+}
+
+@media (min-width: 751px) and (max-width: 1024px) {
+  .comment-box {
+    margin-right: 0;
+  }
+}
+
+.comment-box .movie-info h2 {
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+.comment-box .movie-info .info {
+  font-size: 12px;
+  color: #ddd;
+}
+
+.comment-box .rating-stars {
+  font-size: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+.comment-box .comment {
+  color: #ddd;
+}
+
+.comment-box .comment p {
+  font-size: 12px;
+}
+
+.comment-box .comment time {
+  font-size: 10px;
+}
+
+.comment-box .received-likes {
+  margin-top: 70px;
+  margin-right: 30px;
+  float: left;
+}
+
+.comment-box .received-likes strong {
+  font-weight: normal;
+  font-size: 14px;
+}
+
+.comment-box .received-likes img {
+  margin-top: 6px;
+}
+
+.comment-box button {
+  border: 1px solid #777;
+  color: #777;
+  font-size: 12px;
+  margin-top: 70px;
+  padding: 5px 5px;
+}
+
+.comment-box button:hover {
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.comment-box:nth-of-type(3n+0) {
+  margin-right: 0px;
 }
